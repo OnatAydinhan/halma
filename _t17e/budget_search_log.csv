@@ -1,0 +1,9 @@
+rank,f_progress,f_base_presence,f_defense,f_spread,f_mobility,f_threat,proxy_S,proxy_R,confirm_R_s5000,confirm_R_s5001,confirm_R_s5002,confirm_mean_R,confirm_std_R,confirm_min_R,verdict
+1,448.0000,540.0000,6.0000,4.0000,9.0000,130.0000,NA,NA,1034.86,1013.90,1013.90,1020.89,9.88,1013.90,REJECTED by gate [mean_delta=+20.89 (need > 50)]; USER OVERRIDE 2026-11-04 -> best_weights.json
+2,224.0000,540.0000,6.0000,4.0000,9.0000,130.0000,NA,NA,1006.95,1000.00,986.10,997.68,8.67,986.10,REJECTED [mean_delta=-2.32 (need > 50); min=986.10 (need > 1000)]
+3,336.0000,720.0000,6.0000,4.0000,9.0000,130.0000,NA,NA,979.13,972.15,993.05,981.44,8.69,972.15,REJECTED [mean_delta=-18.56 (need > 50); min=972.15 (need > 1000)]
+4,448.0000,360.0000,6.0000,4.0000,9.0000,130.0000,NA,NA,951.04,972.15,972.15,965.11,9.95,951.04,REJECTED [mean_delta=-34.89 (need > 50); min=951.04 (need > 1000)]
+5,336.0000,360.0000,6.0000,4.0000,9.0000,130.0000,NA,NA,958.11,943.93,951.04,951.03,5.79,943.93,REJECTED [mean_delta=-48.97 (need > 50); min=943.93 (need > 1000)]
+6,224.0000,720.0000,6.0000,4.0000,9.0000,130.0000,NA,NA,907.54,922.29,900.05,909.96,9.24,900.05,REJECTED [mean_delta=-90.04 (need > 50); min=900.05 (need > 1000)]
+7,224.0000,360.0000,6.0000,4.0000,9.0000,130.0000,NA,NA,876.98,900.05,907.54,894.86,13.01,876.98,REJECTED [mean_delta=-105.14 (need > 50); min=876.98 (need > 1000)]
+8,448.0000,720.0000,6.0000,4.0000,9.0000,130.0000,NA,NA,,,,,,,,INCOMPLETE (run died before this cell's games; only s5000_A csv on disk)

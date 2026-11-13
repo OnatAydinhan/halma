@@ -1,0 +1,3 @@
+none (default)  | d1=44 d2=0 d3=44 d4=58 d5=86 d6=106 | movetime500 x3: [124, 124, 124]
+c1_incumbent    | d1=976 d2=0 d3=976 d4=1872 d5=2794 d6=3726 | movetime500 x3: [5540, 5540, 5540]
+best_weights    | d1=976 d2=0 d3=976 d4=1872 d5=2794 d6=3726 | movetime500 x3: [5540, 5540, 5540]

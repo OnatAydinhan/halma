@@ -1,0 +1,66 @@
+264 INFO: PyInstaller: 6.22.3, contrib hooks: 2026.7
+264 INFO: Python: 3.14.7
+305 INFO: Platform: Windows-11-10.0.26300-SP0
+306 INFO: Python environment: C:\Users\onata\AppData\Local\Python\pythoncore-3.14-64
+312 INFO: Removing temporary files and cleaning cache in C:\Users\onata\AppData\Local\pyinstaller
+318 INFO: Module search paths (PYTHONPATH):
+['C:\\Users\\onata\\qwen\\check_halma',
+ 'C:\\Users\\onata\\AppData\\Local\\Python\\pythoncore-3.14-64\\python314.zip',
+ 'C:\\Users\\onata\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs',
+ 'C:\\Users\\onata\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib',
+ 'C:\\Users\\onata\\AppData\\Local\\Python\\pythoncore-3.14-64',
+ 'C:\\Users\\onata\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages',
+ 'C:\\Users\\onata\\qwen\\check_halma']
+683 INFO: Appending 'datas' from .spec
+684 INFO: checking Analysis
+684 INFO: Building Analysis because Analysis-00.toc is non existent
+684 INFO: Looking for Python shared library...
+684 INFO: Using Python shared library: C:\Users\onata\AppData\Local\Python\pythoncore-3.14-64\python314.dll
+685 INFO: Running Analysis Analysis-00.toc
+685 INFO: Target bytecode optimization level: 0
+685 INFO: Initializing module dependency graph...
+686 INFO: Initializing module graph hook caches...
+710 INFO: Analyzing modules for base_library.zip ...
+2300 INFO: Processing standard module hook 'hook-encodings.py' from 'C:\\Users\\onata\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\PyInstaller\\hooks'
+2706 INFO: Processing standard module hook 'hook-math.py' from 'C:\\Users\\onata\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\PyInstaller\\hooks'
+3849 INFO: Processing standard module hook 'hook-difflib.py' from 'C:\\Users\\onata\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\PyInstaller\\hooks'
+3859 INFO: Processing standard module hook 'hook-heapq.py' from 'C:\\Users\\onata\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\PyInstaller\\hooks'
+3950 INFO: Processing standard module hook 'hook-pickle.py' from 'C:\\Users\\onata\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\PyInstaller\\hooks'
+5049 INFO: Caching module dependency graph...
+5071 INFO: Analyzing C:\Users\onata\qwen\check_halma\halma8_gui.py
+5104 INFO: Processing pre-find-module-path hook 'hook-tkinter.py' from 'C:\\Users\\onata\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\PyInstaller\\hooks\\pre_find_module_path'
+5106 INFO: TclTkInfo: initializing cached Tcl/Tk info...
+5373 INFO: Processing standard module hook 'hook-_tkinter.py' from 'C:\\Users\\onata\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\PyInstaller\\hooks'
+5455 INFO: Processing module hooks (post-graph stage)...
+5457 INFO: Processing standard module hook 'hook-_tkinter.py' from 'C:\\Users\\onata\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\PyInstaller\\hooks'
+5460 INFO: Performing binary vs. data reclassification (4 entries)
+5463 INFO: Looking for ctypes DLLs
+5466 INFO: Analyzing run-time hooks ...
+5467 INFO: Including run-time hook 'pyi_rth_inspect.py' from 'C:\\Users\\onata\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+5469 INFO: Including run-time hook 'pyi_rth__tkinter.py' from 'C:\\Users\\onata\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+5472 INFO: Creating base_library.zip...
+5486 INFO: Looking for dynamic libraries
+5614 INFO: Extra DLL search directories (AddDllDirectory): []
+5614 INFO: Extra DLL search directories (PATH): []
+5951 INFO: Warnings written to C:\Users\onata\qwen\check_halma\build\check_halma\warn-check_halma.txt
+5960 INFO: Graph cross-reference written to C:\Users\onata\qwen\check_halma\build\check_halma\xref-check_halma.html
+5987 INFO: checking PYZ
+5987 INFO: Building PYZ because PYZ-00.toc is non existent
+5987 INFO: Building PYZ (ZlibArchive) C:\Users\onata\qwen\check_halma\build\check_halma\PYZ-00.pyz
+6062 INFO: Building PYZ (ZlibArchive) C:\Users\onata\qwen\check_halma\build\check_halma\PYZ-00.pyz completed successfully.
+6067 INFO: checking PKG
+6067 INFO: Building PKG because PKG-00.toc is non existent
+6067 INFO: Building PKG (CArchive) check_halma.pkg
+6899 INFO: Building PKG (CArchive) check_halma.pkg completed successfully.
+6901 INFO: Bootloader C:\Users\onata\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\PyInstaller\bootloader\Windows-64bit-intel\runw.exe
+6901 INFO: checking EXE
+6901 INFO: Building EXE because EXE-00.toc is non existent
+6901 INFO: Building EXE from EXE-00.toc
+6901 INFO: Copying bootloader EXE to C:\Users\onata\qwen\check_halma\dist\check_halma.exe
+7042 INFO: Copying icon to EXE
+7172 INFO: Copying 0 resources to EXE
+7172 INFO: Embedding manifest in EXE
+7327 INFO: Appending PKG archive to EXE
+9281 INFO: Fixing EXE headers
+13113 INFO: Building EXE from EXE-00.toc completed successfully.
+13116 INFO: Build complete! The results are available in: C:\Users\onata\qwen\check_halma\dist

@@ -1,0 +1,153 @@
+warning: unused import: `IllegalMove`
+  --> examples\rules_dump.rs:35:32
+   |
+35 | use halma8_ai::engine::{Board, IllegalMove, Move};
+   |                                ^^^^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused variable: `bs`
+  --> examples\rules_dump.rs:69:23
+   |
+69 |                 (Some(bs), Ok(b)) => {
+   |                       ^^ help: if this is intentional, prefix it with an underscore: `_bs`
+   |
+   = note: `#[warn(unused_variables)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused variable: `Ill`
+   --> examples\rules_dump.rs:120:29
+    |
+120 |                         Err(Ill) => "E",
+    |                             ^^^ help: if this is intentional, prefix it with an underscore: `_Ill`
+
+warning: unused variable: `Ill`
+   --> examples\rules_dump.rs:138:29
+    |
+138 |                         Err(Ill) => "E",
+    |                             ^^^ help: if this is intentional, prefix it with an underscore: `_Ill`
+
+warning: variable `Ill` should have a snake case name
+   --> examples\rules_dump.rs:120:29
+    |
+120 |                         Err(Ill) => "E",
+    |                             ^^^ help: convert the identifier to snake case (notice the capitalization): `ill`
+    |
+    = note: `#[warn(non_snake_case)]` (part of `#[warn(nonstandard_style)]`) on by default
+
+warning: variable `Ill` should have a snake case name
+   --> examples\rules_dump.rs:138:29
+    |
+138 |                         Err(Ill) => "E",
+    |                             ^^^ help: convert the identifier to snake case (notice the capitalization): `ill`
+
+warning: `halma8_ai` (example "rules_dump") generated 6 warnings (run `cargo fix --example "rules_dump" -p halma8_ai` to apply 4 suggestions)
+    Finished `release` profile [optimized] target(s) in 0.04s
+     Running unittests src\lib.rs (target\release\deps\halma8_ai-248855ee935ad4fa.exe)
+
+running 63 tests
+test engine::tests::board_str_start_roundtrips ... ok
+test engine::tests::from_board_str_rejects_bad_chars ... ok
+test engine::tests::t2_isolated_jump_right ... ok
+test engine::tests::position_str_mid_chain_roundtrips ... ok
+test engine::tests::start_placement_matches_halma8 ... ok
+test engine::tests::from_board_str_rejects_bad_length ... ok
+test engine::tests::t2_jump_over_own_piece ... ok
+test engine::tests::position_str_start_roundtrips ... ok
+test engine::tests::t2_jump_bounded_by_edges ... ok
+test engine::tests::t2_start_steps_corner_and_boxed ... ok
+test engine::tests::t2_jump_over_own_other_side ... ok
+test engine::tests::t2_empty_square_empty_lists ... ok
+test engine::tests::t2_no_jump_dst_occupied ... ok
+test engine::tests::t3_end_turn_only_flips ... ok
+test engine::tests::t2_no_jump_middle_empty ... ok
+test engine::tests::t3_jump_with_occupied_destination_raises ... ok
+test engine::tests::t3_move_after_winner_is_set_raises ... ok
+test engine::tests::t2_steps_preserves_dirs_order ... ok
+test engine::tests::t3_end_turn_no_op_when_winner_set ... ok
+test engine::tests::t3_illegal_move_is_rejected ... ok
+test engine::tests::t3_jump_with_empty_middle_raises ... ok
+test engine::tests::t2_out_of_range_empty_lists ... ok
+test engine::tests::t2_pure_of_turn ... ok
+test engine::tests::t3_banned_destination_raises_while_chain_open ... ok
+test engine::tests::t3_move_off_board_raises ... ok
+test engine::tests::t3_single_jump_ending_turn ... ok
+test engine::tests::t3_step_applies_and_flips_turn ... ok
+test engine::tests::t3_step_into_occupied_raises ... ok
+test engine::tests::t3_three_jump_chain ... ok
+test engine::tests::t3_two_jump_chain ... ok
+test engine::tests::t4_move_after_winner_raises_and_endturn_noop ... ok
+test engine::tests::t4_no_false_positive_at_8_of_9 ... ok
+test engine::tests::t4_p1_wins_mixed_with_parked_blue ... ok
+test engine::tests::t4_p1_wins_pure ... ok
+test engine::tests::t4_p2_wins_mixed ... ok
+test engine::tests::t4_p2_wins_pure ... ok
+test engine::tests::t4_winning_jump_with_open_continuation_ends_chain ... ok
+test evaluate::tests::anti_symmetry_heavier_board_exact ... ok
+test evaluate::tests::anti_symmetry_mid_board_exact ... ok
+test evaluate::tests::base_presence_jumps_by_one_when_piece_enters_target_base ... ok
+test evaluate::tests::defense_drops_by_one_when_opp_piece_enters_our_base ... ok
+test evaluate::tests::evaluate_pair_default_pair_equals_evaluate ... ok
+test evaluate::tests::evaluate_pair_honours_distinct_side_weights ... ok
+test evaluate::tests::evaluate_pair_same_weights_equals_evaluate_with ... ok
+test evaluate::tests::mobility_counts_steps_plus_twice_jumps ... ok
+test evaluate::tests::progress_moves_by_one_when_piece_one_closer ... ok
+test evaluate::tests::spread_adjacent_scores_lower_than_apart ... ok
+test evaluate::tests::start_position_is_zero ... ok
+test evaluate::tests::threat_positive_when_attacker_can_complete_in_one ... ok
+test evaluate::tests::weights_load_missing_file_gives_defaults ... ok
+test search::tests::t65_make_unmake_matches_engine_exactly ... ok
+test evaluate::tests::weights_fractional_roundtrip ... ok
+test evaluate::tests::weights_load_save_roundtrip ... ok
+test search::tests::t4_live_chain_returns_legal_action ... ok
+test search::tests::t4_depth2_still_wins_immediately ... ok
+test search::tests::t4_depth1_immediate_win ... ok
+test search::tests::t4_iter_terminates_at_max_depth ... ok
+test search::tests::t4_never_returns_banned_jump_destination ... ok
+test search::tests::t4_midgame_move_is_engine_legal ... ok
+test search::tests::t4_deterministic_same_input_same_output ... ok
+test search::tests::t11_default_weights_pair_matches_plain_search ... ok
+test search::tests::t4_movetime_bounded_returns_legal_move ... ok
+test search::tests::t65_time_budget_contract ... ok
+
+test result: ok. 63 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.13s
+
+     Running unittests src\main.rs (target\release\deps\ai-2b0c2e1c0d5c240e.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\bin\bench.rs (target\release\deps\bench-5c348aa19e46da49.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\bin\selfplay.rs (target\release\deps\selfplay-7c2ed97005a1234f.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\parallel_determinism.rs (target\release\deps\parallel_determinism-c2ba7e0de1b3beec.exe)
+
+running 1 test
+selfplay: 4 games, 64 rows, P1 wins=0, P2 wins=0, ongoing=4
+selfplay: median move ms: 0
+selfplay: wrote C:\Users\onata\AppData\Local\Temp\halma_sp_wtest_38040\w2.csv
+selfplay: 4 games, 64 rows, P1 wins=0, P2 wins=0, ongoing=4
+selfplay: median move ms: 1
+selfplay: wrote C:\Users\onata\AppData\Local\Temp\halma_sp_wtest_38040\w5.csv
+selfplay: 4 games, 64 rows, P1 wins=0, P2 wins=0, ongoing=4
+selfplay: median move ms: 0
+selfplay: wrote C:\Users\onata\AppData\Local\Temp\halma_sp_wtest_38040\w1.csv
+test output_is_worker_count_independent ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.76s
+
+   Doc-tests halma8_ai
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

@@ -1,0 +1,7 @@
+WEIGHTS: C:\Users\onata\qwen\check_halma\c1_incumbent.json
+POSITION: .....222.....222.....222................111.....111.....111..... 1 -
+ACTION: ('jump', (6, 1), (5, 1), (4, 1))
+SCORE: 4640
+applied OK (legal) — turn now 2, chain_active=False
+LINE (4): [('jump', (6, 1), (5, 1), (4, 1)), ('jump', (0, 6), (0, 5), (0, 4)), ('jump', (6, 2), (5, 2), (4, 2)), ('jump', (5, 2), (4, 2), (3, 2))]  root=5540
+SMOKE OK

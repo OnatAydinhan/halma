@@ -1,0 +1,93 @@
+
+=== tools_tune.py (T-15 decoupled-seed loop) ===
+  iterations=3  games=100  depth=6
+  seed_base=1000  elo_games=30  workers=12
+    train   seeds: [1001, 1002, 1003]
+    measure seeds: [2001, 2002, 2003]
+  out_dir=C:\Users\onata\qwen\check_halma\_t15
+
+--- i=0 (anchor = Rust defaults = 1000) ---
+  wrote _t15\weights_v0.json: {"progress": 6, "base_presence": 30, "defense": 25, "spread": 4, "mobility": 3, "threat": 55}
+
+--- Generating initial selfplay.csv (training data, seed_base+1=1001) ---
+$ ai\target\release\selfplay.exe --games 100 --depth 6 --seed 1001 --out _t15\selfplay.csv --workers 12
+  selfplay: 100 games, 11854 rows, P1 wins=1, P2 wins=1, ongoing=98
+  selfplay: median move ms: 179
+  selfplay: wrote _t15\selfplay.csv
+
+--- Iteration 1 ---
+  [step 1] train: selfplay.csv → weights_v1.json (train_seed=1001)
+$ py train_weights.py _t15\selfplay.csv --label progress --mark 50 --seed 1001 -o _t15\weights_v1.json
+  train_weights: _t15\selfplay.csv: label=progress mark=50: 10654 labelled rows, 1200 tied (skipped), 0 bad (skipped)
+  train_weights: held-out (n=2131) accuracy=0.6795 f1=0.6897
+  train_weights: wrote _t15\weights_v1.json: {"progress": 0.1022, "base_presence": 0.1849, "defense": 0.8772, "spread": -0.1159, "mobility": -0.0308, "threat": -0.2789}
+  [step 2] h2h: weights_v1 (P1/A) vs weights_v0 (P2/B), 30 games, depth 6, measure_seed=2001
+$ ai\target\release\selfplay.exe --games 30 --depth 6 --seed 2001 --out _t15\elo_v1.csv --weights-a _t15\weights_v1.json --weights-b _t15\weights_v0.json --workers 12
+  selfplay: 30 games, 3599 rows, P1 wins=0, P2 wins=1, ongoing=29
+  selfplay: head-to-head P1/A = [progress 0.1022 base_presence 0.1849 defense 0.8772 spread -0.1159 mobility -0.0308 threat -0.2789]
+  selfplay: head-to-head P2/B = [progress 6 base_presence 30 defense 25 spread 4 mobility 3 threat 55]
+  selfplay: median move ms: 154
+  selfplay: wrote _t15\elo_v1.csv
+  results: P1(A)=W0 L1  D=29  S=0.48333  R=988.41  median_ms=154  acc=0.6795
+  [step 3] logged → 1,1001,2001,100,6,0.48333,988.41,0.6795,154
+  [step 4] regenerating selfplay.csv (train_seed=1002, 100 games, depth 6)
+$ ai\target\release\selfplay.exe --games 100 --depth 6 --seed 1002 --out _t15\selfplay.csv --workers 12
+  selfplay: 100 games, 11854 rows, P1 wins=1, P2 wins=1, ongoing=98
+  selfplay: median move ms: 179
+  selfplay: wrote _t15\selfplay.csv
+
+--- Iteration 2 ---
+  [step 1] train: selfplay.csv → weights_v2.json (train_seed=1002)
+$ py train_weights.py _t15\selfplay.csv --label progress --mark 50 --seed 1002 -o _t15\weights_v2.json
+  train_weights: _t15\selfplay.csv: label=progress mark=50: 10654 labelled rows, 1200 tied (skipped), 0 bad (skipped)
+  train_weights: held-out (n=2131) accuracy=0.6790 f1=0.6957
+  train_weights: wrote _t15\weights_v2.json: {"progress": 0.0968, "base_presence": 0.149, "defense": 0.8598, "spread": -0.0949, "mobility": -0.0298, "threat": -0.2346}
+  [step 2] h2h: weights_v2 (P1/A) vs weights_v0 (P2/B), 30 games, depth 6, measure_seed=2002
+$ ai\target\release\selfplay.exe --games 30 --depth 6 --seed 2002 --out _t15\elo_v2.csv --weights-a _t15\weights_v2.json --weights-b _t15\weights_v0.json --workers 12
+  selfplay: 30 games, 3600 rows, P1 wins=0, P2 wins=0, ongoing=30
+  selfplay: head-to-head P1/A = [progress 0.0968 base_presence 0.149 defense 0.8598 spread -0.0949 mobility -0.0298 threat -0.2346]
+  selfplay: head-to-head P2/B = [progress 6 base_presence 30 defense 25 spread 4 mobility 3 threat 55]
+  selfplay: median move ms: 170
+  selfplay: wrote _t15\elo_v2.csv
+  results: P1(A)=W0 L0  D=30  S=0.50000  R=1000.00  median_ms=170  acc=0.6790
+  ⚠ R=1000.00 is within 1.0 of anchor (1000) — the fit may not be changing behaviour
+  [step 3] logged → 2,1002,2002,100,6,0.50000,1000.00,0.6790,170
+  [step 4] regenerating selfplay.csv (train_seed=1003, 100 games, depth 6)
+$ ai\target\release\selfplay.exe --games 100 --depth 6 --seed 1003 --out _t15\selfplay.csv --workers 12
+  selfplay: 100 games, 11854 rows, P1 wins=1, P2 wins=1, ongoing=98
+  selfplay: median move ms: 200
+  selfplay: wrote _t15\selfplay.csv
+
+--- Iteration 3 ---
+  [step 1] train: selfplay.csv → weights_v3.json (train_seed=1003)
+$ py train_weights.py _t15\selfplay.csv --label progress --mark 50 --seed 1003 -o _t15\weights_v3.json
+  train_weights: _t15\selfplay.csv: label=progress mark=50: 10654 labelled rows, 1200 tied (skipped), 0 bad (skipped)
+  train_weights: held-out (n=2131) accuracy=0.6710 f1=0.6858
+  train_weights: wrote _t15\weights_v3.json: {"progress": 0.1012, "base_presence": 0.2087, "defense": 0.9039, "spread": -0.1182, "mobility": -0.0243, "threat": -0.2684}
+  [step 2] h2h: weights_v3 (P1/A) vs weights_v0 (P2/B), 30 games, depth 6, measure_seed=2003
+$ ai\target\release\selfplay.exe --games 30 --depth 6 --seed 2003 --out _t15\elo_v3.csv --weights-a _t15\weights_v3.json --weights-b _t15\weights_v0.json --workers 12
+  selfplay: 30 games, 3600 rows, P1 wins=0, P2 wins=0, ongoing=30
+  selfplay: head-to-head P1/A = [progress 0.1012 base_presence 0.2087 defense 0.9039 spread -0.1182 mobility -0.0243 threat -0.2684]
+  selfplay: head-to-head P2/B = [progress 6 base_presence 30 defense 25 spread 4 mobility 3 threat 55]
+  selfplay: median move ms: 169
+  selfplay: wrote _t15\elo_v3.csv
+  results: P1(A)=W0 L0  D=30  S=0.50000  R=1000.00  median_ms=169  acc=0.6710
+  ⚠ R=1000.00 is within 1.0 of anchor (1000) — the fit may not be changing behaviour
+  [step 3] logged → 3,1003,2003,100,6,0.50000,1000.00,0.6710,169
+
+  wrote _t15\elo_curve.svg
+
+=== SUMMARY ===
+  tune_log.txt:  C:\Users\onata\qwen\check_halma\_t15\tune_log.txt
+  elo_curve.svg: C:\Users\onata\qwen\check_halma\_t15\elo_curve.svg
+
+  iter          R        Δ        S     acc
+  ------  -------  -------  -------  ------
+  i=0      1000.0      0.0        —       —
+  i=1       988.4    -11.6  0.48333  0.6795
+  i=2      1000.0     +0.0  0.50000  0.6790
+  i=3      1000.0     +0.0  0.50000  0.6710
+
+  ⚠ All R_i within 50 of anchor (1000). Fit may still be degenerate.
+    Check tune_log.txt and the per-iteration training output for clues.
+

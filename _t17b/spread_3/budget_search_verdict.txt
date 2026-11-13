@@ -1,0 +1,1 @@
+PROXY-ONLY: 1 candidates scored at d4/15. top proxy R=1325.17 (delta +325.17).

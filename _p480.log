@@ -1,0 +1,5 @@
+selfplay: 10 games, 3380 rows, P1 wins=5, P2 wins=1, ongoing=4
+selfplay: head-to-head P1/A = [progress 6 base_presence 30 defense 25 spread 4 mobility 3 threat 55]
+selfplay: head-to-head P2/B = [progress 6 base_presence 30 defense 25 spread 4 mobility 3 threat 55]
+selfplay: median move ms: 217
+selfplay: wrote _p480.csv

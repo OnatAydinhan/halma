@@ -1,0 +1,51 @@
+
+=== tools_budget_search.py (T-16/T-17) ===
+  sampler=grid  candidates=40  seed_base=0
+  proxy:  games=15 depth=4 maxmove=480 double-blind workers=12
+  confirm: SKIPPED
+  out_dir=C:\Users\onata\qwen\check_halma\_t17_pair2
+  anchor file: C:\Users\onata\qwen\check_halma\best_weights.json (R=1000 on this scale)
+  12 candidates sampled
+
+--- Proxy scoring (12 candidates) ---
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 15 --depth 4 --seed 10000 --out _t17_pair2\cand_proxy0_A.csv --weights-a _t17_pair2\cand_w0.json --weights-b C:\Users\onata\qwen\check_halma\best_weights.json --workers 12 --maxmove 480
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 15 --depth 4 --seed 60000 --out _t17_pair2\cand_proxy0_B.csv --weights-a C:\Users\onata\qwen\check_halma\best_weights.json --weights-b _t17_pair2\cand_w0.json --workers 12 --maxmove 480
+  cand[  0]  S=0.46667 R=  976.80  (W=2 L=4 D=24)
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 15 --depth 4 --seed 10001 --out _t17_pair2\cand_proxy1_A.csv --weights-a _t17_pair2\cand_w1.json --weights-b C:\Users\onata\qwen\check_halma\best_weights.json --workers 12 --maxmove 480
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 15 --depth 4 --seed 60001 --out _t17_pair2\cand_proxy1_B.csv --weights-a C:\Users\onata\qwen\check_halma\best_weights.json --weights-b _t17_pair2\cand_w1.json --workers 12 --maxmove 480
+  cand[  1]  S=0.61667 R= 1082.59  (W=7 L=0 D=23)
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 15 --depth 4 --seed 10002 --out _t17_pair2\cand_proxy2_A.csv --weights-a _t17_pair2\cand_w2.json --weights-b C:\Users\onata\qwen\check_halma\best_weights.json --workers 12 --maxmove 480
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 15 --depth 4 --seed 60002 --out _t17_pair2\cand_proxy2_B.csv --weights-a C:\Users\onata\qwen\check_halma\best_weights.json --weights-b _t17_pair2\cand_w2.json --workers 12 --maxmove 480
+  cand[  2]  S=0.53333 R= 1023.20  (W=6 L=4 D=20)
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 15 --depth 4 --seed 10003 --out _t17_pair2\cand_proxy3_A.csv --weights-a _t17_pair2\cand_w3.json --weights-b C:\Users\onata\qwen\check_halma\best_weights.json --workers 12 --maxmove 480
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 15 --depth 4 --seed 60003 --out _t17_pair2\cand_proxy3_B.csv --weights-a C:\Users\onata\qwen\check_halma\best_weights.json --weights-b _t17_pair2\cand_w3.json --workers 12 --maxmove 480
+  cand[  3]  S=0.61667 R= 1082.59  (W=7 L=0 D=23)
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 15 --depth 4 --seed 10004 --out _t17_pair2\cand_proxy4_A.csv --weights-a _t17_pair2\cand_w4.json --weights-b C:\Users\onata\qwen\check_halma\best_weights.json --workers 12 --maxmove 480
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 15 --depth 4 --seed 60004 --out _t17_pair2\cand_proxy4_B.csv --weights-a C:\Users\onata\qwen\check_halma\best_weights.json --weights-b _t17_pair2\cand_w4.json --workers 12 --maxmove 480
+  cand[  4]  S=0.60000 R= 1070.44  (W=7 L=1 D=22)
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 15 --depth 4 --seed 10005 --out _t17_pair2\cand_proxy5_A.csv --weights-a _t17_pair2\cand_w5.json --weights-b C:\Users\onata\qwen\check_halma\best_weights.json --workers 12 --maxmove 480
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 15 --depth 4 --seed 60005 --out _t17_pair2\cand_proxy5_B.csv --weights-a C:\Users\onata\qwen\check_halma\best_weights.json --weights-b _t17_pair2\cand_w5.json --workers 12 --maxmove 480
+  cand[  5]  S=0.66667 R= 1120.41  (W=11 L=1 D=18)
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 15 --depth 4 --seed 10006 --out _t17_pair2\cand_proxy6_A.csv --weights-a _t17_pair2\cand_w6.json --weights-b C:\Users\onata\qwen\check_halma\best_weights.json --workers 12 --maxmove 480
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 15 --depth 4 --seed 60006 --out _t17_pair2\cand_proxy6_B.csv --weights-a C:\Users\onata\qwen\check_halma\best_weights.json --weights-b _t17_pair2\cand_w6.json --workers 12 --maxmove 480
+  cand[  6]  S=0.61667 R= 1082.59  (W=10 L=3 D=17)
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 15 --depth 4 --seed 10007 --out _t17_pair2\cand_proxy7_A.csv --weights-a _t17_pair2\cand_w7.json --weights-b C:\Users\onata\qwen\check_halma\best_weights.json --workers 12 --maxmove 480
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 15 --depth 4 --seed 60007 --out _t17_pair2\cand_proxy7_B.csv --weights-a C:\Users\onata\qwen\check_halma\best_weights.json --weights-b _t17_pair2\cand_w7.json --workers 12 --maxmove 480
+  cand[  7]  S=0.58333 R= 1058.45  (W=9 L=4 D=17)
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 15 --depth 4 --seed 10008 --out _t17_pair2\cand_proxy8_A.csv --weights-a _t17_pair2\cand_w8.json --weights-b C:\Users\onata\qwen\check_halma\best_weights.json --workers 12 --maxmove 480
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 15 --depth 4 --seed 60008 --out _t17_pair2\cand_proxy8_B.csv --weights-a C:\Users\onata\qwen\check_halma\best_weights.json --weights-b _t17_pair2\cand_w8.json --workers 12 --maxmove 480
+  cand[  8]  S=0.60000 R= 1070.44  (W=7 L=1 D=22)
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 15 --depth 4 --seed 10009 --out _t17_pair2\cand_proxy9_A.csv --weights-a _t17_pair2\cand_w9.json --weights-b C:\Users\onata\qwen\check_halma\best_weights.json --workers 12 --maxmove 480
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 15 --depth 4 --seed 60009 --out _t17_pair2\cand_proxy9_B.csv --weights-a C:\Users\onata\qwen\check_halma\best_weights.json --weights-b _t17_pair2\cand_w9.json --workers 12 --maxmove 480
+  cand[  9]  S=0.61667 R= 1082.59  (W=9 L=2 D=19)
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 15 --depth 4 --seed 10010 --out _t17_pair2\cand_proxy10_A.csv --weights-a _t17_pair2\cand_w10.json --weights-b C:\Users\onata\qwen\check_halma\best_weights.json --workers 12 --maxmove 480
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 15 --depth 4 --seed 60010 --out _t17_pair2\cand_proxy10_B.csv --weights-a C:\Users\onata\qwen\check_halma\best_weights.json --weights-b _t17_pair2\cand_w10.json --workers 12 --maxmove 480
+  cand[ 10]  S=0.65000 R= 1107.54  (W=9 L=0 D=21)
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 15 --depth 4 --seed 10011 --out _t17_pair2\cand_proxy11_A.csv --weights-a _t17_pair2\cand_w11.json --weights-b C:\Users\onata\qwen\check_halma\best_weights.json --workers 12 --maxmove 480
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 15 --depth 4 --seed 60011 --out _t17_pair2\cand_proxy11_B.csv --weights-a C:\Users\onata\qwen\check_halma\best_weights.json --weights-b _t17_pair2\cand_w11.json --workers 12 --maxmove 480
+  cand[ 11]  S=0.68333 R= 1133.61  (W=12 L=1 D=17)
+
+--- Confirm phase SKIPPED (proxy-only run) ---
+
+  LOG     -> _t17_pair2\budget_search_log.csv
+  VERDICT -> PROXY-ONLY: 12 candidates scored at d4/15. top proxy R=1133.61 (delta +133.61).

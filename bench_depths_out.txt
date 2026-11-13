@@ -1,0 +1,44 @@
+====================================================================
+  check_halma AI — depth vs wall-clock time table
+  Machine: this box  |  Build: release  |  No pruning
+  Budget per position: 50 s (movetime 50000)
+====================================================================
+
+Position seed=42: P1-to-move, turn 49
+
+Position seed=137: P2-to-move, turn 50
+
+Position seed=256: P1-to-move, turn 49
+
+
+--- seed=42  (P1-to-move, turn 49) ---
+  Depth    ms (cumulative)    score (cp)
+  ---- ---------------- ----------
+  9        50005              115
+  Total: 50005 ms  ->  50.0 s
+  Best move: bestmove jump 5,0 5,1 5,2
+
+--- seed=137  (P2-to-move, turn 50) ---
+  Depth    ms (cumulative)    score (cp)
+  ---- ---------------- ----------
+  13       50001              -18
+  Total: 50001 ms  ->  50.0 s
+  Best move: bestmove jump 0,5 0,4 0,3
+
+--- seed=256  (P1-to-move, turn 49) ---
+  Depth    ms (cumulative)    score (cp)
+  ---- ---------------- ----------
+  9        50003              346
+  Total: 50004 ms  ->  50.0 s
+  Best move: bestmove jump 5,0 5,1 5,2
+
+====================================================================
+  Summary: deepest completed depth within 50-s budget
+====================================================================
+  seed=42:  depth 9  in  50.0 s
+  seed=137:  depth 13  in  50.0 s
+  seed=256:  depth 9  in  50.0 s
+
+Note: cumulative ms counts from the moment `go movetime 50000` was sent.
+      Delta between consecutive rows ≈ wall-clock time spent at that depth.
+      Tree size grows roughly 4-10x per depth iteration (branch factor x depth).

@@ -1,0 +1,1 @@
+PROXY-ONLY: 2 candidates scored at d3/3. top proxy R=1000.00 (delta +0.00).

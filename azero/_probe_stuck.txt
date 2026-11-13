@@ -1,0 +1,9 @@
+probe: azero/checkpoints/round_3.pt  device=cuda
+  game0: moves=200 winner=DRAW  max_red_in_bluebase=0  max_blue_in_redbase=0  final(red,blue)=(0,0)
+  game1: moves=200 winner=DRAW  max_red_in_bluebase=0  max_blue_in_redbase=0  final(red,blue)=(0,0)
+  game2: moves=200 winner=DRAW  max_red_in_bluebase=0  max_blue_in_redbase=1  final(red,blue)=(0,1)
+
+VALUE TARGETS  n=600  mean|v|=0.0409  frac_zero=0.000
+MODEL VALUE  mean|v|=0.0757  std=0.0792  min=-0.235 max=0.177
+POLICY TARGET  mean_entropy=2.515  mean_legal=19.1  (ln(uniform 417)=6.033)
+LOSS SPLIT     policy_loss=3.0730  value_loss=0.0013  total=3.0743

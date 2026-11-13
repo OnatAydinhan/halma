@@ -1,0 +1,79 @@
+
+=== tools_budget_search.py (T-16) ===
+  sampler=random  candidates=2  seed_base=0
+  proxy:  games=3 depth=3 maxmove=60 double-blind workers=4
+  confirm: SKIPPED
+  out_dir=C:\Users\onata\qwen\check_halma\_smoke_db
+  anchors: A={"progress": 6, "base_presence": 30, "defense": 25, "spread": 4, "mobility": 3, "threat": 55} (R=1000)
+  2 candidates sampled
+
+--- Proxy scoring (2 candidates) ---
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 3 --depth 3 --seed 10000 --out _smoke_db\cand_proxy0.csv_A --weights-a _smoke_db\cand_w0.json --weights-b C:\Users\onata\qwen\check_halma\weights_v0.json --workers 4 --maxmove 60
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 3 --depth 3 --seed 60000 --out _smoke_db\cand_proxy0.csv_B --weights-a C:\Users\onata\qwen\check_halma\weights_v0.json --weights-b _smoke_db\cand_w0.json --workers 4 --maxmove 60
+  cand[  0]  S=0.50000 R= 1000.00  (W=0 L=0 D=6)
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 3 --depth 3 --seed 10001 --out _smoke_db\cand_proxy1.csv_A --weights-a _smoke_db\cand_w1.json --weights-b C:\Users\onata\qwen\check_halma\weights_v0.json --workers 4 --maxmove 60
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 3 --depth 3 --seed 60001 --out _smoke_db\cand_proxy1.csv_B --weights-a C:\Users\onata\qwen\check_halma\weights_v0.json --weights-b _smoke_db\cand_w1.json --workers 4 --maxmove 60
+  cand[  1]  S=0.50000 R= 1000.00  (W=0 L=0 D=6)
+
+--- Confirm phase SKIPPED (proxy-only run) ---
+
+  LOG     -> _smoke_db\budget_search_log.csv
+  VERDICT -> PROXY-ONLY: 2 candidates scored at d3/3. top proxy R=1000.00 (delta +0.00).
+BUDGET_SMOKE_DONE
+
+=== tools_tune.py (T-15 decoupled-seed loop) ===
+  iterations=1  games=5  depth=3
+  seed_base=9000  elo_games=3(per order)  maxmove=60  double-blind h2h  workers=4
+    train   seeds: [9001]
+    measure seeds: [10001]
+  out_dir=C:\Users\onata\qwen\check_halma\_smoke_tune
+
+--- i=0 (anchor = Rust defaults = 1000) ---
+  wrote _smoke_tune\weights_v0.json: {"progress": 6, "base_presence": 30, "defense": 25, "spread": 4, "mobility": 3, "threat": 55}
+
+--- Generating initial selfplay.csv (training data, seed_base+1=9001) ---
+$ ai\target\release\selfplay.exe --games 5 --depth 3 --seed 9001 --out _smoke_tune\selfplay.csv --workers 4
+  selfplay: 5 games, 600 rows, P1 wins=0, P2 wins=0, ongoing=5
+  selfplay: median move ms: 1
+  selfplay: wrote _smoke_tune\selfplay.csv
+
+--- Iteration 1 ---
+  [step 1] train: selfplay.csv → weights_v1.json (train_seed=9001)
+$ py train_weights.py _smoke_tune\selfplay.csv --label progress --mark 50 --seed 9001 -o _smoke_tune\weights_v1.json
+  train_weights: _smoke_tune\selfplay.csv: label=progress mark=50: 360 labelled rows, 240 tied (skipped), 0 bad (skipped)
+  train_weights: held-out (n=72) accuracy=0.7917 f1=0.8101
+  train_weights: wrote _smoke_tune\weights_v1.json: {"progress": 0.1749, "base_presence": 1.3476, "defense": 2.3362, "spread": -0.2807, "mobility": -0.0649, "threat": -0.4162}
+  [step 2] double-blind h2h: weights_v1 vs weights_v0, 3 games/order, depth 3, maxmove=60, seeds 10001/60001
+$ ai\target\release\selfplay.exe --games 3 --depth 3 --seed 10001 --out _smoke_tune\elo_v1_A.csv --weights-a _smoke_tune\weights_v1.json --weights-b _smoke_tune\weights_v0.json --maxmove 60 --workers 4
+  selfplay: 3 games, 180 rows, P1 wins=0, P2 wins=0, ongoing=3
+  selfplay: head-to-head P1/A = [progress 0.1749 base_presence 1.3476 defense 2.3362 spread -0.2807 mobility -0.0649 threat -0.4162]
+  selfplay: head-to-head P2/B = [progress 6 base_presence 30 defense 25 spread 4 mobility 3 threat 55]
+  selfplay: median move ms: 1
+  selfplay: wrote _smoke_tune\elo_v1_A.csv
+$ ai\target\release\selfplay.exe --games 3 --depth 3 --seed 60001 --out _smoke_tune\elo_v1_B.csv --weights-a _smoke_tune\weights_v0.json --weights-b _smoke_tune\weights_v1.json --maxmove 60 --workers 4
+  selfplay: 3 games, 180 rows, P1 wins=0, P2 wins=0, ongoing=3
+  selfplay: head-to-head P1/A = [progress 6 base_presence 30 defense 25 spread 4 mobility 3 threat 55]
+  selfplay: head-to-head P2/B = [progress 0.1749 base_presence 1.3476 defense 2.3362 spread -0.2807 mobility -0.0649 threat -0.4162]
+  selfplay: median move ms: 1
+  selfplay: wrote _smoke_tune\elo_v1_B.csv
+    order A (cand=P1): W=0 L=0 D=3  median=1ms
+    order B (cand=P2): W=0 L=0 D=3  median=1ms
+  results: cand W=0 L=0 D=6  S=0.50000  R=1000.00  median_ms=1  acc=0.7917
+  ⚠ R=1000.00 is within 1.0 of anchor (1000) — the fit may not be changing behaviour
+  [step 3] logged → 1,9001,10001,5,3,0.50000,1000.00,0.7917,1
+
+  wrote _smoke_tune\elo_curve.svg
+
+=== SUMMARY ===
+  tune_log.txt:  C:\Users\onata\qwen\check_halma\_smoke_tune\tune_log.txt
+  elo_curve.svg: C:\Users\onata\qwen\check_halma\_smoke_tune\elo_curve.svg
+
+  iter          R        Δ        S     acc
+  ------  -------  -------  -------  ------
+  i=0      1000.0      0.0        —       —
+  i=1      1000.0     +0.0  0.50000  0.7917
+
+  ⚠ All R_i within 50 of anchor (1000). Fit may still be degenerate.
+    Check tune_log.txt and the per-iteration training output for clues.
+
+TUNE_SMOKE_DONE

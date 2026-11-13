@@ -1,0 +1,4 @@
+iteration,train_seed,measure_seed,games,depth,S_score,R_elo,test_accuracy,median_move_ms
+1,1001,2001,100,6,0.48333,988.41,0.6795,154
+2,1002,2002,100,6,0.50000,1000.00,0.6790,170
+3,1003,2003,100,6,0.50000,1000.00,0.6710,169

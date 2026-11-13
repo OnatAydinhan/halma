@@ -1,0 +1,21 @@
+
+=== tools_tune.py ===
+  iterations=3  games=100  depth=6
+  seed=0  elo_games=30  workers=12
+  out_dir=C:\Users\onata\qwen\check_halma
+
+--- i=0 (anchor = Rust defaults = 1000) ---
+
+--- Generating initial selfplay.csv (training data) ---
+$ ai\target\release\selfplay.exe --games 100 --depth 6 --seed 0 --out .\selfplay.csv --workers 12
+  selfplay: 100 games, 11667 rows, P1 wins=4, P2 wins=1, ongoing=95
+  selfplay: median move ms: 173
+  selfplay: wrote .\selfplay.csv
+
+--- Iteration 1 ---
+  [step 1] train: selfplay.csv → weights_v1.json
+$ py train_weights.py .\selfplay.csv --label progress --mark 50 --seed 0 -o .\weights_v1.json
+  ERROR: exit=1
+  stdout: 
+  stderr: train_weights: reference ply 50 is farther than 1 ply from the nearest row in game 12 (gap=40); pick a --mark inside the game length (or a --maxmove large enough to reach it).
+$ py train_weights.py .\selfplay.csv --label progress --mark 50 --seed 0 -o .\weights_v1.json

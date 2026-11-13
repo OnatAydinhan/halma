@@ -1,0 +1,86 @@
+
+=== tools_budget_search.py (T-16/T-17) ===
+  sampler=grid  candidates=40  seed_base=0
+  proxy:  SKIPPED (--skip-proxy) -> d6-confirm ALL cells directly
+  confirm: games=25 depth=6 maxmove=480 double-blind seeds=[5000, 5001, 5002]
+  out_dir=C:\Users\onata\qwen\check_halma\_t17e
+  anchor file: C:\Users\onata\qwen\check_halma\c1_incumbent.json (R=1000 on this scale)
+  9 candidates sampled
+
+--- Proxy screen SKIPPED (9 cells -> d6-confirm directly) ---
+
+--- Confirm (9 cells; d6/25, seeds [5000, 5001, 5002]) ---
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 5000 --out _t17e\cand_confirm_0_s5000_A.csv --weights-a _t17e\cand_w0.json --weights-b C:\Users\onata\qwen\check_halma\c1_incumbent.json --workers 12 --maxmove 480
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 55000 --out _t17e\cand_confirm_0_s5000_B.csv --weights-a C:\Users\onata\qwen\check_halma\c1_incumbent.json --weights-b _t17e\cand_w0.json --workers 12 --maxmove 480
+  rank 1  seed 5000: W=10 L=27 D=13  S=0.3300 R=876.98
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 5002 --out _t17e\cand_confirm_0_s5002_A.csv --weights-a _t17e\cand_w0.json --weights-b C:\Users\onata\qwen\check_halma\c1_incumbent.json --workers 12 --maxmove 480
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 55002 --out _t17e\cand_confirm_0_s5002_B.csv --weights-a C:\Users\onata\qwen\check_halma\c1_incumbent.json --weights-b _t17e\cand_w0.json --workers 12 --maxmove 480
+  rank 1  seed 5002: W=12 L=26 D=12  S=0.3600 R=900.05
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 5004 --out _t17e\cand_confirm_0_s5004_A.csv --weights-a _t17e\cand_w0.json --weights-b C:\Users\onata\qwen\check_halma\c1_incumbent.json --workers 12 --maxmove 480
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 55004 --out _t17e\cand_confirm_0_s5004_B.csv --weights-a C:\Users\onata\qwen\check_halma\c1_incumbent.json --weights-b _t17e\cand_w0.json --workers 12 --maxmove 480
+  rank 1  seed 5004: W=12 L=25 D=13  S=0.3700 R=907.54
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 5000 --out _t17e\cand_confirm_1_s5000_A.csv --weights-a _t17e\cand_w1.json --weights-b C:\Users\onata\qwen\check_halma\c1_incumbent.json --workers 12 --maxmove 480
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 55000 --out _t17e\cand_confirm_1_s5000_B.csv --weights-a C:\Users\onata\qwen\check_halma\c1_incumbent.json --weights-b _t17e\cand_w1.json --workers 12 --maxmove 480
+  rank 2  seed 5000: W=19 L=18 D=13  S=0.5100 R=1006.95
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 5002 --out _t17e\cand_confirm_1_s5002_A.csv --weights-a _t17e\cand_w1.json --weights-b C:\Users\onata\qwen\check_halma\c1_incumbent.json --workers 12 --maxmove 480
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 55002 --out _t17e\cand_confirm_1_s5002_B.csv --weights-a C:\Users\onata\qwen\check_halma\c1_incumbent.json --weights-b _t17e\cand_w1.json --workers 12 --maxmove 480
+  rank 2  seed 5002: W=19 L=19 D=12  S=0.5000 R=1000.00
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 5004 --out _t17e\cand_confirm_1_s5004_A.csv --weights-a _t17e\cand_w1.json --weights-b C:\Users\onata\qwen\check_halma\c1_incumbent.json --workers 12 --maxmove 480
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 55004 --out _t17e\cand_confirm_1_s5004_B.csv --weights-a C:\Users\onata\qwen\check_halma\c1_incumbent.json --weights-b _t17e\cand_w1.json --workers 12 --maxmove 480
+  rank 2  seed 5004: W=18 L=20 D=12  S=0.4800 R=986.10
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 5000 --out _t17e\cand_confirm_2_s5000_A.csv --weights-a _t17e\cand_w2.json --weights-b C:\Users\onata\qwen\check_halma\c1_incumbent.json --workers 12 --maxmove 480
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 55000 --out _t17e\cand_confirm_2_s5000_B.csv --weights-a C:\Users\onata\qwen\check_halma\c1_incumbent.json --weights-b _t17e\cand_w2.json --workers 12 --maxmove 480
+  rank 3  seed 5000: W=11 L=24 D=15  S=0.3700 R=907.54
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 5002 --out _t17e\cand_confirm_2_s5002_A.csv --weights-a _t17e\cand_w2.json --weights-b C:\Users\onata\qwen\check_halma\c1_incumbent.json --workers 12 --maxmove 480
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 55002 --out _t17e\cand_confirm_2_s5002_B.csv --weights-a C:\Users\onata\qwen\check_halma\c1_incumbent.json --weights-b _t17e\cand_w2.json --workers 12 --maxmove 480
+  rank 3  seed 5002: W=12 L=23 D=15  S=0.3900 R=922.29
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 5004 --out _t17e\cand_confirm_2_s5004_A.csv --weights-a _t17e\cand_w2.json --weights-b C:\Users\onata\qwen\check_halma\c1_incumbent.json --workers 12 --maxmove 480
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 55004 --out _t17e\cand_confirm_2_s5004_B.csv --weights-a C:\Users\onata\qwen\check_halma\c1_incumbent.json --weights-b _t17e\cand_w2.json --workers 12 --maxmove 480
+  rank 3  seed 5004: W=11 L=25 D=14  S=0.3600 R=900.05
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 5000 --out _t17e\cand_confirm_3_s5000_A.csv --weights-a _t17e\cand_w3.json --weights-b C:\Users\onata\qwen\check_halma\c1_incumbent.json --workers 12 --maxmove 480
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 55000 --out _t17e\cand_confirm_3_s5000_B.csv --weights-a C:\Users\onata\qwen\check_halma\c1_incumbent.json --weights-b _t17e\cand_w3.json --workers 12 --maxmove 480
+  rank 4  seed 5000: W=18 L=24 D=8  S=0.4400 R=958.11
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 5002 --out _t17e\cand_confirm_3_s5002_A.csv --weights-a _t17e\cand_w3.json --weights-b C:\Users\onata\qwen\check_halma\c1_incumbent.json --workers 12 --maxmove 480
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 55002 --out _t17e\cand_confirm_3_s5002_B.csv --weights-a C:\Users\onata\qwen\check_halma\c1_incumbent.json --weights-b _t17e\cand_w3.json --workers 12 --maxmove 480
+  rank 4  seed 5002: W=17 L=25 D=8  S=0.4200 R=943.93
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 5004 --out _t17e\cand_confirm_3_s5004_A.csv --weights-a _t17e\cand_w3.json --weights-b C:\Users\onata\qwen\check_halma\c1_incumbent.json --workers 12 --maxmove 480
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 55004 --out _t17e\cand_confirm_3_s5004_B.csv --weights-a C:\Users\onata\qwen\check_halma\c1_incumbent.json --weights-b _t17e\cand_w3.json --workers 12 --maxmove 480
+  rank 4  seed 5004: W=17 L=24 D=9  S=0.4300 R=951.04
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 5000 --out _t17e\cand_confirm_4_s5000_A.csv --weights-a _t17e\cand_w4.json --weights-b C:\Users\onata\qwen\check_halma\c1_incumbent.json --workers 12 --maxmove 480
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 55000 --out _t17e\cand_confirm_4_s5000_B.csv --weights-a C:\Users\onata\qwen\check_halma\c1_incumbent.json --weights-b _t17e\cand_w4.json --workers 12 --maxmove 480
+  rank 5  seed 5000: W=14 L=17 D=19  S=0.4700 R=979.13
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 5002 --out _t17e\cand_confirm_4_s5002_A.csv --weights-a _t17e\cand_w4.json --weights-b C:\Users\onata\qwen\check_halma\c1_incumbent.json --workers 12 --maxmove 480
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 55002 --out _t17e\cand_confirm_4_s5002_B.csv --weights-a C:\Users\onata\qwen\check_halma\c1_incumbent.json --weights-b _t17e\cand_w4.json --workers 12 --maxmove 480
+  rank 5  seed 5002: W=14 L=19 D=17  S=0.4500 R=965.14
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 5004 --out _t17e\cand_confirm_4_s5004_A.csv --weights-a _t17e\cand_w4.json --weights-b C:\Users\onata\qwen\check_halma\c1_incumbent.json --workers 12 --maxmove 480
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 55004 --out _t17e\cand_confirm_4_s5004_B.csv --weights-a C:\Users\onata\qwen\check_halma\c1_incumbent.json --weights-b _t17e\cand_w4.json --workers 12 --maxmove 480
+  rank 5  seed 5004: W=15 L=18 D=17  S=0.4700 R=979.13
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 5000 --out _t17e\cand_confirm_5_s5000_A.csv --weights-a _t17e\cand_w5.json --weights-b C:\Users\onata\qwen\check_halma\c1_incumbent.json --workers 12 --maxmove 480
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 55000 --out _t17e\cand_confirm_5_s5000_B.csv --weights-a C:\Users\onata\qwen\check_halma\c1_incumbent.json --weights-b _t17e\cand_w5.json --workers 12 --maxmove 480
+  rank 6  seed 5000: W=17 L=20 D=13  S=0.4700 R=979.13
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 5002 --out _t17e\cand_confirm_5_s5002_A.csv --weights-a _t17e\cand_w5.json --weights-b C:\Users\onata\qwen\check_halma\c1_incumbent.json --workers 12 --maxmove 480
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 55002 --out _t17e\cand_confirm_5_s5002_B.csv --weights-a C:\Users\onata\qwen\check_halma\c1_incumbent.json --weights-b _t17e\cand_w5.json --workers 12 --maxmove 480
+  rank 6  seed 5002: W=17 L=21 D=12  S=0.4600 R=972.15
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 5004 --out _t17e\cand_confirm_5_s5004_A.csv --weights-a _t17e\cand_w5.json --weights-b C:\Users\onata\qwen\check_halma\c1_incumbent.json --workers 12 --maxmove 480
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 55004 --out _t17e\cand_confirm_5_s5004_B.csv --weights-a C:\Users\onata\qwen\check_halma\c1_incumbent.json --weights-b _t17e\cand_w5.json --workers 12 --maxmove 480
+  rank 6  seed 5004: W=18 L=19 D=13  S=0.4900 R=993.05
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 5000 --out _t17e\cand_confirm_6_s5000_A.csv --weights-a _t17e\cand_w6.json --weights-b C:\Users\onata\qwen\check_halma\c1_incumbent.json --workers 12 --maxmove 480
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 55000 --out _t17e\cand_confirm_6_s5000_B.csv --weights-a C:\Users\onata\qwen\check_halma\c1_incumbent.json --weights-b _t17e\cand_w6.json --workers 12 --maxmove 480
+  rank 7  seed 5000: W=15 L=22 D=13  S=0.4300 R=951.04
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 5002 --out _t17e\cand_confirm_6_s5002_A.csv --weights-a _t17e\cand_w6.json --weights-b C:\Users\onata\qwen\check_halma\c1_incumbent.json --workers 12 --maxmove 480
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 55002 --out _t17e\cand_confirm_6_s5002_B.csv --weights-a C:\Users\onata\qwen\check_halma\c1_incumbent.json --weights-b _t17e\cand_w6.json --workers 12 --maxmove 480
+  rank 7  seed 5002: W=16 L=20 D=14  S=0.4600 R=972.15
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 5004 --out _t17e\cand_confirm_6_s5004_A.csv --weights-a _t17e\cand_w6.json --weights-b C:\Users\onata\qwen\check_halma\c1_incumbent.json --workers 12 --maxmove 480
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 55004 --out _t17e\cand_confirm_6_s5004_B.csv --weights-a C:\Users\onata\qwen\check_halma\c1_incumbent.json --weights-b _t17e\cand_w6.json --workers 12 --maxmove 480
+  rank 7  seed 5004: W=17 L=21 D=12  S=0.4600 R=972.15
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 5000 --out _t17e\cand_confirm_7_s5000_A.csv --weights-a _t17e\cand_w7.json --weights-b C:\Users\onata\qwen\check_halma\c1_incumbent.json --workers 12 --maxmove 480
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 55000 --out _t17e\cand_confirm_7_s5000_B.csv --weights-a C:\Users\onata\qwen\check_halma\c1_incumbent.json --weights-b _t17e\cand_w7.json --workers 12 --maxmove 480
+  rank 8  seed 5000: W=22 L=17 D=11  S=0.5500 R=1034.86
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 5002 --out _t17e\cand_confirm_7_s5002_A.csv --weights-a _t17e\cand_w7.json --weights-b C:\Users\onata\qwen\check_halma\c1_incumbent.json --workers 12 --maxmove 480
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 55002 --out _t17e\cand_confirm_7_s5002_B.csv --weights-a C:\Users\onata\qwen\check_halma\c1_incumbent.json --weights-b _t17e\cand_w7.json --workers 12 --maxmove 480
+  rank 8  seed 5002: W=20 L=18 D=12  S=0.5200 R=1013.90
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 5004 --out _t17e\cand_confirm_7_s5004_A.csv --weights-a _t17e\cand_w7.json --weights-b C:\Users\onata\qwen\check_halma\c1_incumbent.json --workers 12 --maxmove 480
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 55004 --out _t17e\cand_confirm_7_s5004_B.csv --weights-a C:\Users\onata\qwen\check_halma\c1_incumbent.json --weights-b _t17e\cand_w7.json --workers 12 --maxmove 480
+  rank 8  seed 5004: W=20 L=18 D=12  S=0.5200 R=1013.90
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 5000 --out _t17e\cand_confirm_8_s5000_A.csv --weights-a _t17e\cand_w8.json --weights-b C:\Users\onata\qwen\check_halma\c1_incumbent.json --workers 12 --maxmove 480
+  $ C:\Users\onata\qwen\check_halma\ai\target\release\selfplay.exe --games 25 --depth 6 --seed 55000 --out _t17e\cand_confirm_8_s5000_B.csv --weights-a C:\Users\onata\qwen\check_halma\c1_incumbent.json --weights-b _t17e\cand_w8.json --workers 12 --maxmove 480

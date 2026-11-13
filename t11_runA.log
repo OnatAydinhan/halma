@@ -1,0 +1,38 @@
+
+=== tools_tune.py ===
+  iterations=3  games=100  depth=6
+  seed=0  elo_games=30  workers=12
+  out_dir=C:\Users\onata\qwen\check_halma
+
+--- i=0 (anchor = Rust defaults = 1000) ---
+
+--- Generating initial selfplay.csv (training data) ---
+$ ai\target\release\selfplay.exe --games 100 --depth 6 --seed 0 --out .\selfplay.csv --workers 12
+  selfplay: 100 games, 11667 rows, P1 wins=4, P2 wins=1, ongoing=95
+  selfplay: median move ms: 263
+  selfplay: wrote .\selfplay.csv
+
+--- Iteration 1 ---
+  [step 1] train: selfplay.csv → weights_v1.json
+$ py train_weights.py .\selfplay.csv --label progress --mark 50 --seed 0 -o .\weights_v1.json
+  train_weights: .\selfplay.csv: label=progress mark=50: 9867 labelled rows, 1800 tied (skipped), 0 bad (skipped)
+  train_weights: held-out (n=1973) accuracy=0.7101 f1=0.7276
+  train_weights: wrote .\weights_v1.json: {"progress": 0, "base_presence": 0, "defense": 1, "spread": 0, "mobility": 0, "threat": 0}
+  [step 2] h2h: weights_v1 (P1/A) vs weights_v0 (P2/B), 30 games, depth 6, seed 0
+$ ai\target\release\selfplay.exe --games 30 --depth 6 --seed 0 --out .\elo_v1.csv --weights-a .\weights_v1.json --weights-b .\weights_v0.json --workers 12
+  selfplay: 30 games, 3600 rows, P1 wins=0, P2 wins=1, ongoing=29
+  selfplay: head-to-head P1/A = [progress 0 base_presence 0 defense 1 spread 0 mobility 0 threat 0]
+  selfplay: head-to-head P2/B = [progress 6 base_presence 30 defense 25 spread 4 mobility 3 threat 55]
+  selfplay: median move ms: 232
+  selfplay: wrote .\elo_v1.csv
+  results: P1(A)=W0 L1  D=29  S=0.48333  R=988.41  median_ms=232  acc=0.7101
+  [step 3] logged → 1,0,100,6,0.48333,988.41,0.7101,232
+  [step 4] regenerating selfplay.csv (seed=0, 100 games, depth 6)
+$ ai\target\release\selfplay.exe --games 100 --depth 6 --seed 0 --out .\selfplay.csv --workers 12
+  selfplay: 100 games, 11667 rows, P1 wins=4, P2 wins=1, ongoing=95
+  selfplay: median move ms: 249
+  selfplay: wrote .\selfplay.csv
+
+--- Iteration 2 ---
+  [step 1] train: selfplay.csv → weights_v2.json
+$ py train_weights.py .\selfplay.csv --label progress --mark 50 --seed 0 -o .\weights_v2.json

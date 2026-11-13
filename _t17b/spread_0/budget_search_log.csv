@@ -1,0 +1,2 @@
+rank,f_progress,f_base_presence,f_defense,f_spread,f_mobility,f_threat,proxy_S,proxy_R,confirm_R_s5000,confirm_R_s5001,confirm_R_s5002,confirm_mean_R,confirm_std_R,confirm_min_R,verdict
+1,7.0000,4.0000,0.2400,0.5000,3.0000,2.3636,0.8667,1325.17,,,,,,,not confirmed (skip-confirm)

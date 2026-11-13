@@ -1,0 +1,15 @@
+R) weight-wiring regression detector (fixed asym pos, depth 4):
+     A:c1_incumbent   score=3758  move='jump 6,1 5,1 4,1'
+     C:best_weights   score=3758  move='jump 6,1 5,1 4,1'
+     X:extreme(prog)  score=8000  move='jump 6,1 5,1 4,1'
+     real-model vs progress-only differ (score 3758 vs 8000): loaded weights drive play: OK
+
+K) Kibitzer-on matrix (eval that landed):
+     H/H  -> '+4640  (Red favours)'  OK
+     H/A  -> '+4640  (Red favours)'  OK
+     A/H  -> '+4640  (Red favours)'  OK
+     A/A  -> '#5  (Blue wins in 5)'  OK
+
+N) New game with a changed Blue model: clean restart + Blue answered: OK
+
+T-G5 GATE OK

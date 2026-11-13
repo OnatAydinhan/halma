@@ -1,0 +1,27 @@
+T-17 STEP 1c — wide d4/25 SHAPE probe (interior-optimum test)
+anchor = best_weights.json (incumbent, R=1000); locked: threat130 defense6 spread4 mobility9
+goal: confirm each open axis (progress, base) turns over somewhere, or prove
+it doesn't at d4 (still-rising / collapse) -> then only d6 can rank it.
+==========================================================================
+progress       13.9998  R= 1006.95
+progress       28.0002  R= 1138.99
+progress       55.9998  R= 1288.06
+progress           112  R= 1401.92
+progress           224  R= 1477.99
+progress           448  R= 1798.25 *
+progress           896  R=  993.05
+progress          1792  R= 1006.95
+progress          3584  R= 1013.90
+--------------------------------------------------------------------------
+  VERDICT[progress]: INTERIOR PEAK at 448 (boundary reached; d4 can rank this axis)
+
+base_presence       24  R= 1034.86
+base_presence       48  R= 1020.87
+base_presence       90  R= 1172.78
+base_presence      180  R= 1155.54
+base_presence      360  R= 1181.70
+base_presence      720  R= 1219.87 *
+base_presence     1440  R= 1219.87
+--------------------------------------------------------------------------
+  VERDICT[base_presence]: INTERIOR PEAK at 720 (boundary reached; d4 can rank this axis)
+

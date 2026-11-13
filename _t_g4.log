@@ -1,0 +1,8 @@
+0) widgets present, Kibitzer starts off: OK
+1) start position: '+5540  (Red favours)' + non-empty line: OK
+2) panel refreshed after a human move, board not mutated: OK
+3) undo: panel back to start eval '+5540  (Red favours)': OK
+4) A/A with Kibitzer on: 321 move(s), analysis landed ('+1806  (Red favours)') in 36.6s: OK
+5) toggle off: panel reset: OK
+6) wedged child: one-line warning shown, no crash: OK
+T-G4 GATE OK

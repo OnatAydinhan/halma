@@ -1,0 +1,40 @@
+T-17 STEP 1b — pass 2 (convergence) around progress42/base120/threat130/defense6/spread4/mobility9; anchor=best_weights.json (R=1000 scale); d4/15
+progress           18  R=  1082.59
+progress           24  R=  1082.59
+progress           30  R=  1190.85
+progress           36  R=  1206.65
+progress           42  R=  1259.52
+progress           48  R=  1279.59
+progress       55.0002  R=  1240.82
+progress       64.9998  R=  1206.65
+progress       79.9998  R=  1301.33 *
+------------------------------------------------------------------------
+base_presence      90  R=  1458.45 *
+base_presence     105  R=  1325.17
+base_presence     120  R=  1301.33
+base_presence     135  R=  1381.70
+base_presence     150  R=  1458.45
+------------------------------------------------------------------------
+threat            110  R=  1325.17
+threat         129.998  R=  1416.56 *
+threat         150.001  R=  1351.67
+------------------------------------------------------------------------
+defense             4  R=  1351.67
+defense             6  R=  1416.56 *
+defense             8  R=  1416.56
+defense            10  R=  1416.56
+------------------------------------------------------------------------
+spread              3  R=  1351.67
+spread              4  R=  1458.45 *
+spread              5  R=  1279.59
+spread              6  R=  1175.73
+------------------------------------------------------------------------
+mobility       6.9999  R=  1381.70
+mobility            9  R=  1458.45 *
+mobility       11.0001  R=  1351.67
+------------------------------------------------------------------------
+
+SANITY: incumbent-exact weights -> R=1011.59  (expect ~1000)  OK
+
+PASS-2 GREEDY POINT (absolute): progress=79.9998 base_presence=90 defense=6 spread=4 mobility=9 threat=129.998
+(1 forward pass each; run a 3rd pass / d6 neighborhood to harden before accept)

@@ -1,0 +1,11 @@
+selfplay: 30 games, 12782 rows, P1 wins=9, P2 wins=3, ongoing=18
+selfplay: head-to-head P1/A = [progress 6 base_presence 30 defense 25 spread 4 mobility 3 threat 55]
+selfplay: head-to-head P2/B = [progress 6 base_presence 30 defense 25 spread 4 mobility 3 threat 55]
+selfplay: median move ms: 193
+selfplay: wrote _db1.csv
+selfplay: 30 games, 12769 rows, P1 wins=8, P2 wins=4, ongoing=18
+selfplay: head-to-head P1/A = [progress 6 base_presence 30 defense 25 spread 4 mobility 3 threat 55]
+selfplay: head-to-head P2/B = [progress 6 base_presence 30 defense 25 spread 4 mobility 3 threat 55]
+selfplay: median move ms: 206
+selfplay: wrote _db2.csv
+DBLIND_DONE

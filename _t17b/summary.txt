@@ -1,0 +1,63 @@
+T-17 STEP 1 — d4 boundary-hunt (greedy 1D coordinate-ascent, importance order)
+anchor = best_weights.json (incumbent, R=1000 scale); proxy d4/15 double-blind cap 480
+start point P* = 24  90  8  4  9  130
+========================================================================
+progress          15  R= 1046.60
+progress          18  R= 1046.60
+progress          21  R= 1070.44
+progress          24  R= 1070.44
+progress          27  R= 1120.41
+progress          30  R= 1223.26
+progress          33  R= 1107.54
+progress          36  R= 1259.52
+progress          42  R= 1301.33 *
+------------------------------------------------------------------------
+threat         69.9985  R= 1175.73
+threat         90.002  R= 1240.82
+threat           110  R= 1240.82
+threat         129.998  R= 1351.67 *
+threat         150.001  R= 1161.21
+threat           170  R= 1223.26
+------------------------------------------------------------------------
+base_presence     60  R= 1223.26
+base_presence     75  R= 1259.52
+base_presence     90  R= 1381.70
+base_presence    105  R= 1325.17
+base_presence    120  R= 1416.56 *
+base_presence    135  R= 1416.56
+------------------------------------------------------------------------
+defense            4  R= 1279.59
+defense            6  R= 1416.56 *
+defense            8  R= 1416.56
+defense           10  R= 1381.70
+defense           12  R= 1325.17
+defense           15  R= 1381.70
+defense           18  R= 1301.33
+------------------------------------------------------------------------
+spread             2  R= 1325.17
+spread             3  R= 1301.33
+spread             4  R= 1416.56 *
+spread             6  R= 1325.17
+spread             8  R= 1240.82
+spread            10  R= 1206.65
+spread            12  R= 1206.65
+------------------------------------------------------------------------
+mobility           3  R= 1259.52
+mobility       5.0001  R= 1223.26
+mobility       6.9999  R= 1279.59
+mobility           9  R= 1416.56 *
+mobility       11.0001  R= 1190.85
+mobility       12.9999  R= 1190.85
+------------------------------------------------------------------------
+
+GREEDY POINT after this pass (absolute weights):
+  progress       42
+  base_presence  120
+  defense        6
+  spread         4
+  mobility       9
+  threat         129.998
+
+NOTE: 1 forward pass (coordinate-ascent). Axes marked 'still rising'
+hit the tested max; a pass 2 (wider) or the d6 neighborhood search
+should follow after the user reviews this surface.

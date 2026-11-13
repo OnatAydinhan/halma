@@ -1,0 +1,10 @@
+rank,f_progress,f_base_presence,f_defense,f_spread,f_mobility,f_threat,proxy_S,proxy_R,confirm_R_s5000,confirm_R_s5001,confirm_R_s5002,confirm_mean_R,confirm_std_R,confirm_min_R,verdict
+1,74.6667,3.0000,0.2400,1.0000,3.0000,2.3636,0.9900,1798.25,,,,,,,not confirmed (skip-confirm)
+2,37.3333,3.0000,0.2400,1.0000,3.0000,2.3636,0.9400,1477.99,,,,,,,not confirmed (skip-confirm)
+3,18.6667,3.0000,0.2400,1.0000,3.0000,2.3636,0.9100,1401.92,,,,,,,not confirmed (skip-confirm)
+4,9.3333,3.0000,0.2400,1.0000,3.0000,2.3636,0.8400,1288.06,,,,,,,not confirmed (skip-confirm)
+5,4.6667,3.0000,0.2400,1.0000,3.0000,2.3636,0.6900,1138.99,,,,,,,not confirmed (skip-confirm)
+6,597.3333,3.0000,0.2400,1.0000,3.0000,2.3636,0.5200,1013.90,,,,,,,not confirmed (skip-confirm)
+7,2.3333,3.0000,0.2400,1.0000,3.0000,2.3636,0.5100,1006.95,,,,,,,not confirmed (skip-confirm)
+8,298.6667,3.0000,0.2400,1.0000,3.0000,2.3636,0.5100,1006.95,,,,,,,not confirmed (skip-confirm)
+9,149.3333,3.0000,0.2400,1.0000,3.0000,2.3636,0.4900,993.05,,,,,,,not confirmed (skip-confirm)

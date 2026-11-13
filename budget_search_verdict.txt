@@ -1,0 +1,1 @@
+ACCEPTED rank=2  mean_R@depth6 = 1285.94 (delta +285.94); best_weights.json written.
